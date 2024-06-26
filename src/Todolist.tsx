@@ -16,7 +16,7 @@ export const Todolist = ({title, tasks,removeTask,}: PropsType) => {
 	let [valueFilter, setValueFilter] = useState<FilterValueType>('All')
 
 	const changeFilter = (filterValue: FilterValueType) => {
-		setValueFilter(filteredTasks)
+		setValueFilter(filterValue)
 	}
 
 	  let filteredTasks = tasks
@@ -25,6 +25,7 @@ export const Todolist = ({title, tasks,removeTask,}: PropsType) => {
 	}
 	if (valueFilter === 'Completed') {
 		filteredTasks = tasks.filter(el => el.isDone)
+
 	}
 
 
